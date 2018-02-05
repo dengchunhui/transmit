@@ -25,7 +25,7 @@ class Transmit
 
     private function update()
     {
-        exec("svn co https://github.com/dengchunhui/transmit.git/trunk /var/www/html/");
+        exec("svn up /var/www/html/");
     }
 
     function sendUrlConf($key = "")
