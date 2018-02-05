@@ -27,7 +27,7 @@ class Transmit
     {
         $res=shell_exec("svn up /var/www/html/");
         echo '<pre>';
-        die(var_dump($res) . '<pre>');
+        die(var_dump(111,$res) . '<pre>');
     }
 
     function sendUrlConf($key = "")
