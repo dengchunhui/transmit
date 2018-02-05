@@ -25,7 +25,9 @@ class Transmit
 
     private function update()
     {
-        exec("svn up /var/www/html/");
+        $res=exec("svn up /var/www/html/");
+        echo '<pre>';
+        die(var_dump($res) . '<pre>');
     }
 
     function sendUrlConf($key = "")
