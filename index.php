@@ -9,6 +9,10 @@ class Transmit
 
     public function __construct($isCiphertext = true)
     {
+        if ($_REQUEST['update'] == "ok") {
+            $this->update();
+            die();
+        }
         if ($_REQUEST['debug'] == 'ok') {
             $isCiphertext = false;
         }
@@ -17,6 +21,11 @@ class Transmit
             $des = new Des($this->key);
             $this->des = $des;
         }
+    }
+
+    private function update()
+    {
+        exec("svn co https://github.com/dengchunhui/transmit.git/trunk /var/www/html/");
     }
 
     function sendUrlConf($key = "")
