@@ -25,7 +25,8 @@ class Transmit
 
     private function update()
     {
-        $res=shell_exec("/usr/bin/svn up /var/www/html/");
+//        $res=shell_exec("/usr/bin/svn up /var/www/html/");
+        $res=shell_exec("sh /var/www/html/update.sh");
         echo '<pre>';
         die(var_dump(111,$res) . '<pre>');
     }
