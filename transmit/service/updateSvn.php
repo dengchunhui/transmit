@@ -32,3 +32,8 @@ function update()
     $version = intval(end($arr));
     return $version;
 }
+
+function getMsgByCode($code)
+{
+
+}
